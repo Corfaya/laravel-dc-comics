@@ -31,7 +31,7 @@ class ComicsTableSeeder extends Seeder
             $comic = new Comic();
 
             $comic->title = $faker->words(3, true);
-            $comic->description = $faker->realText($maxNbChars = 300, $indexSize = 3);
+            $comic->description = $faker->realText(300, 3);
             $comic->thumb = $faker->word.'/'.$faker->word().'.jpg';
             $comic->price = $faker->randomFloat(2, 1, 350);
             $comic->series = $faker->words(4, true);
