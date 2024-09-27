@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController as PagesController;
+use App\Http\Controllers\ComicController as ComicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,6 @@ Route::get('/fans', [PagesController::class, 'fansRedirect'])->name('fans');
 Route::get('/news', [PagesController::class, 'newsRedirect'])->name('news');
 
 Route::get('shop', [PagesController::class, 'shopRedirect'])->name('shop');
+
+//resource
+Route::resource('comics', ComicController::class);
