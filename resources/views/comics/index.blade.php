@@ -4,7 +4,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>I nostri fumetti</h1>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1>I nostri fumetti</h1>
+                    <a href="{{route('comics.create')}}" class="btn btn-warning btn-sm">Add</a>
+                </div>
             </div>
         </div>
         <div class="row mt-4">
