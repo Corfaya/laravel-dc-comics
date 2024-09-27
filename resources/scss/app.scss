@@ -1,1 +1,173 @@
 @import '~bootstrap/scss/bootstrap';
+$primary_color: #0C7CEC;
+$main_bg: #1C1C1C;
+$footer_bg: #303030;
+
+/*HEADER*/
+a.shop-custom-dropdown::after {
+    color: $primary_color
+}
+
+input {
+    width: 100%;
+}
+
+input, .search {
+    border-bottom: 2px solid $primary_color;
+}
+
+.links {
+    a {
+        color: black;
+        &.active {
+            color: $primary_color;
+            border-bottom: 5px solid $primary_color;
+            padding-bottom: 52px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1199px) {
+    .active {
+        padding-bottom: 30px !important;
+    }
+}
+
+/*HOME*/
+.bg-hero {
+    background-image: url("../img/jumbotron.jpg");
+    background-size: cover;
+    height: 400px;
+
+    .main-btn {
+        left: 10%;
+        top: 92%;
+        padding: 10px 20px;
+        font-size: 24px;
+        left: 10%;
+        background-color: $primary_color;
+        transition: all 0.3 ease;
+
+        &:hover {
+            background-color: darken($primary_color, 10%);
+        }
+    }
+}
+
+.bg-color {
+    background-color: $main_bg;
+
+    .col-12 {
+        button {
+            border: 1px solid $primary_color;
+            padding: 10px 60px;
+            transition: all 0.3 ease;
+
+            &:hover {
+                background-color: $primary_color;
+            }
+        }
+    }
+}
+
+div.cover-box {
+    margin: 20px auto;
+    min-width: 150px;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    overflow: hidden;
+
+    img {
+        min-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        object-position: top;
+        transition: all 0.7s ease;
+
+        &:hover {
+            opacity: 0.5;
+            transform: scale(1.2)
+        }
+    }
+}
+
+.banner {
+    background-color: $primary_color;
+
+    .blue-section {
+        .w_square {
+            width: 50px;
+            height: 50px;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                object-position: center;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+/*FOOTER*/
+.footer-middle {
+    background-image: url("../img/footer-bg.jpg");
+    background-size: cover;
+
+    .bg-logo {
+        background-image: url("../img/dc-logo-bg.png");
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    .col-12 {
+        ul {
+            a {
+                color: #838383;
+                transition: color 0.3 ease;
+
+                &:hover {
+                    color: #a5a5a5
+                }
+            }
+        }
+    }
+
+    .policy-info {
+        background-color: transparent;
+        font-size: 15px;
+        color: #838383;
+        p {
+            margin: 0;
+        }
+        span, .cookies-custom {
+            cursor: pointer;
+            color: $primary_color;
+        }
+    }
+}
+
+.footer-bottom {
+    background-color: $footer_bg;
+
+    button {
+        border: 1px solid $primary_color;
+        transition: all 0.3 ease;
+
+        &:hover {
+            background-color: #ffffffa1;
+            color: #fff;
+            border: 1px solid #ffffffa1
+        }
+    }
+}
+
+.text_blue {
+    color: $primary_color;
+}
