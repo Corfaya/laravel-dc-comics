@@ -33,7 +33,7 @@ Route::get('/fans', [PagesController::class, 'fansRedirect'])->name('fans');
 
 Route::get('/news', [PagesController::class, 'newsRedirect'])->name('news');
 
-Route::get('shop', [PagesController::class, 'shopRedirect'])->name('shop');
+Route::get('/shop', [PagesController::class, 'shopRedirect'])->name('shop');
 
 //resource
 Route::resource('comics', ComicController::class);
