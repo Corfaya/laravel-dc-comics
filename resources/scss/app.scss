@@ -171,3 +171,19 @@ div.cover-box {
 .text_blue {
     color: $primary_color;
 }
+
+
+/*CREATE*/
+.form-jumbo {
+    background-image: url("../img/jumbotron.jpg");
+    background-size: cover;
+    opacity: 0.8;
+    .title-box {
+        width: 700px;
+        h1, h3, p {
+            width: fit-content;
+            background-color: #ffffffc4;
+            border-radius: 8px;
+        }
+    }
+}

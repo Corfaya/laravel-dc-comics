@@ -47,6 +47,12 @@
     <div class="bg-color pt-5">
         <div class="container">
             <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center text-white">
+                        <h1>I nostri fumetti</h1>
+                        <a href="{{route('comics.create')}}" class="btn btn-primary btn-sm text-white"><i class="bi bi-plus-circle"></i> Add comic</a>
+                    </div>
+                </div>
                 @foreach ($comics as $comic)
                 <div class="col-6 col-md-4 col-xl-2 mx-auto">
                     <div class="cover-box">
