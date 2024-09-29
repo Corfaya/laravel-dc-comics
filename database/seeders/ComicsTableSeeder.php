@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Comic as Comic;
-use Faker\Generator as Faker;
+// use Faker\Generator as Faker;
 
 class ComicsTableSeeder extends Seeder
 {
@@ -14,33 +14,31 @@ class ComicsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run(Faker $faker)
+    public function run()
     {
-        //test
-        $artists = [];
-        $writers = [];
-        for($a=0; $a<20; $a++) {
-            $artists [] = $faker->firstName().' '.$faker->lastName();
-        }
-        for($w=0; $w<20; $w++) {
-            $writers [] = $faker->firstName().' '.$faker->lastName();
-        }
-        //end test
+        $comicList = config('db');
 
-        for($k=0; $k<30; $k++) {
-            $comic = new Comic();
+        foreach($comicList as $comic) {
+            $comic_detail = new Comic();
 
-            $comic->title = $faker->words(3, true);
-            $comic->description = $faker->realText(300, 3);
-            $comic->thumb = $faker->word.'/'.$faker->word().'.jpg';
-            $comic->price = $faker->randomFloat(2, 1, 350);
-            $comic->series = $faker->words(4, true);
-            $comic->sale_date = $faker->date();
-            $comic->type = $faker->words(2, true);
-            $comic->artists = implode(', ', $faker->randomElements($artists));
-            $comic->writers = implode(', ', $faker->randomElements($writers));
+            $comic_detail->title = $comic['title'];
+            $comic_detail->description = $comic['description'];
+            $comic_detail->thumb = $comic['thumb'];
+            $comic_detail->price = floatval(str_replace('$', '', $comic['price']));
+            $comic_detail->series = $comic['series'];
+            $comic_detail->sale_date = $comic['sale_date'];
+            $comic_detail->type = $comic['type'];
+            $comic_detail->artists = implode(', ', $comic['artists']);
+            $comic_detail->writers = implode(', ', $comic['writers']);
 
-            $comic->save();
+            $comic_detail->save();
         }
+
+        
+
+            
+
+            
+        
     }
 }
