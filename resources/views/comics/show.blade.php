@@ -56,12 +56,12 @@
                 <div class="col-12 col-md-6">
                     <h5 class="fw-bold">Talent</h5>
                     <div class="p-1">
-                        <div class="d-flex justify-content-between fw-bolder">
-                            <p class="m-0 pe-5">Art by:</p>
+                        <div class="d-flex justify-content-between">
+                            <p class="m-0 pe-5 fw-bolder">Art by:</p>
                             <p class="text-primary ps-5">{{$comic->artists}}</p>
                         </div>
-                        <div class="d-flex justify-content-between fw-bolder">
-                            <p class="m-0 pe-5">Written by:</p>
+                        <div class="d-flex justify-content-between">
+                            <p class="m-0 pe-5 fw-bolder">Written by:</p>
                             <p class="text-primary ps-5">{{$comic->writers}}</p>
                         </div>
                     </div>
@@ -69,17 +69,21 @@
                 <div class="col-12 col-md-5 offset-md-1">
                     <h5 class="fw-bold">Specs</h5>
                     <div class="p-1">
-                        <div class="d-flex justify-content-between fw-bolder">
-                            <p class="m-0 pe-5">Series:</p>
+                        <div class="d-flex justify-content-between">
+                            <p class="m-0 pe-5 fw-bolder">Series:</p>
                             <p class="text-primary text-uppercase ps-5">{{$comic->series}}</p>
                         </div>
-                        <div class="d-flex justify-content-between fw-bolder">
-                            <p class="m-0 pe-5">U.S. Price:</p>
-                            <p class="text-primary ps-5">${{$comic->price}}</p>
+                        <div class="d-flex justify-content-between">
+                            <p class="m-0 pe-5 fw-bolder">Type:</p>
+                            <p class="ps-5 text-uppercase">{{$comic->type}}</p>
                         </div>
-                        <div class="d-flex justify-content-between fw-bolder">
-                            <p class="m-0 pe-5">On Sale Date:</p>
-                            <p class="text-primary ps-5">{{$comic->sale_date}}</p>
+                        <div class="d-flex justify-content-between">
+                            <p class="m-0 pe-5 fw-bolder">U.S. Price:</p>
+                            <p class="ps-5">${{$comic->price}}</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="m-0 pe-5 fw-bolder">On Sale Date:</p>
+                            <p class="ps-5">{{date('M d Y', strtotime($comic->sale_date))}}</p>
                         </div>
                     </div>
                 </div>
