@@ -223,3 +223,12 @@ div.cover-box {
         }
     }
 }
+
+.bottom-details {
+    background-color: #F6F6F6;
+    border-top: 1px solid rgba(189, 189, 189, 0.459);
+    h5, .d-flex {
+        border-bottom: 1px solid rgb(182, 182, 182);
+        padding: 10px 5px;
+    }
+}
