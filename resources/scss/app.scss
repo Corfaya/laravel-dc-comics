@@ -12,13 +12,15 @@ input {
     width: 100%;
 }
 
-input, .search {
+input,
+.search {
     border-bottom: 2px solid $primary_color;
 }
 
 .links {
     a {
         color: black;
+
         &.active {
             color: $primary_color;
             border-bottom: 5px solid $primary_color;
@@ -143,10 +145,13 @@ div.cover-box {
         background-color: transparent;
         font-size: 15px;
         color: #838383;
+
         p {
             margin: 0;
         }
-        span, .cookies-custom {
+
+        span,
+        .cookies-custom {
             cursor: pointer;
             color: $primary_color;
         }
@@ -178,12 +183,43 @@ div.cover-box {
     background-image: url("../img/jumbotron.jpg");
     background-size: cover;
     opacity: 0.8;
+
     .title-box {
         width: 700px;
-        h1, h3, p {
+
+        h1,
+        h3,
+        p {
             width: fit-content;
             background-color: #ffffffc4;
             border-radius: 8px;
+        }
+    }
+}
+
+/*SHOW*/
+.detail-cover-box {
+    max-width: 200px;
+    left: 10%;
+    top: 40%;
+    border-style: inset;
+    border: 1px solid white;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.details {
+    .green-bar {
+        background-color: #55BA59;
+        border-bottom: 1px solid black;
+        .available-style, .price-tag {
+            color: #B4FD9C;
+        }
+        .dropdown {
+            border-left: 1px solid black;
         }
     }
 }
