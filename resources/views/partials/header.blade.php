@@ -33,7 +33,7 @@
                             <a class="text-decoration-none {{Route::currentRouteName() === 'characters' ? 'active' : ''}}" href="{{route('characters')}}">CHARACTERS</a>
                         </li>
                         <li class="px-2 fw-bolder">
-                            <a class="text-decoration-none {{Route::currentRouteName() === 'comics.index' ? 'active' : ''}}" href="{{route('comics.index')}}">COMICS</a>
+                            <a class="text-decoration-none {{(Route::currentRouteName() === 'comics.index' || Route::currentRouteName() === 'comics.show') ? 'active' : ''}}" href="{{route('comics.index')}}">COMICS</a>
                         </li>
                         <li class="px-2 fw-bolder">
                             <a class="text-decoration-none {{Route::currentRouteName() === 'movies' ? 'active' : ''}}" href="{{route('movies')}}">MOVIES</a>
