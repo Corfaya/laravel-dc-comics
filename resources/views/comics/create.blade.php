@@ -55,19 +55,19 @@
                 
                     <div class="col-12 col-md-6">
                         <label for="sale_date" class="control-label">Data di vendita</label>
-                        <input type="date" class="form-control" name="sale_date" id="sale_date" placeholder="Vendita">
+                        <input type="date" class="form-control" name="sale_date" id="sale_date" placeholder="Data di vendita">
                     </div>
                 </div>
                 
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <label for="type" class="control-label">Tipo</label>
-                        <input type="text" class="form-control" name="type" id="type" placeholder="Tipo">
+                        <input type="text" class="form-control" name="type" id="type" placeholder="Tipo/Genere">
                     </div>
                 
                     <div class="col-12 col-md-6">
                         <label for="artists" class="control-label">Artista</label>
-                        <input type="text" class="form-control" name="artists" id="artists" placeholder="Artista">
+                        <input type="text" class="form-control" name="artists" id="artists" placeholder="Artisti">
                     </div>
                 </div>
                 
