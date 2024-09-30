@@ -43,7 +43,7 @@
                 
                     <div class="col-12 col-md-6">
                         <label for="price" class="control-label">Prezzo</label>
-                        <input type="text" class="form-control" name="price" id="price" placeholder="Prezzo">
+                        <input type="number" class="form-control" name="price" id="price" placeholder="Prezzo">
                     </div>
                 </div>
                 
