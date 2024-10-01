@@ -62,8 +62,16 @@
                 
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <label for="type" class="control-label">Tipo</label>
-                        <input type="text" class="form-control" name="type" id="type" placeholder="Tipo/Genere" value="{{$comic->type}}">
+                        <div class="d-flex my-3">
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="radio" name="type" id="graphic_novel" value="{{$comic->type}}">
+                                <label class="form-check-label" for="graphic_novel">Graphic Novel</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="type" id="comic_book" value="{{$comic->type}}">
+                                <label class="form-check-label" for="comic_book">Comic Book</label>
+                            </div>
+                        </div>
                     </div>
                 
                     <div class="col-12 col-md-6">

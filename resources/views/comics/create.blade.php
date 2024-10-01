@@ -61,9 +61,20 @@
                 
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <label for="type" class="control-label">Tipo</label>
-                        <input type="text" class="form-control" name="type" id="type" placeholder="Tipo/Genere">
+                        <div class="d-flex my-3">
+                            <div class="form-check me-3">
+                                <input class="form-check-input" type="radio" name="type" id="graphic_novel" value="graphic novel">
+                                <label class="form-check-label" for="graphic_novel">Graphic Novel</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="type" id="comic_book" value="comic book">
+                                <label class="form-check-label" for="comic_book">Comic Book</label>
+                            </div>
+                        </div>
+                        {{-- <label for="type" class="control-label">Tipo</label>
+                        <input type="text" class="form-control" name="type" id="type" placeholder="Tipo"> --}}
                     </div>
+                    
                 
                     <div class="col-12 col-md-6">
                         <label for="artists" class="control-label">Artista</label>
