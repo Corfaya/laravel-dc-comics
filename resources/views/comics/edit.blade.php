@@ -32,7 +32,7 @@
                 
                     <div class="col-12">
                         <label for="description" class="control-label">Breve descrizione</label>
-                        <textarea class="form-control" name="description" id="description" placeholder="Descrizione" value="{{$comic->description}}"></textarea>
+                        <textarea class="form-control" name="description" id="description" placeholder="Descrizione">{{$comic->description}}</textarea>
                     </div>
                 </div>
                 

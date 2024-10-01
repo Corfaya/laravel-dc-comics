@@ -11,10 +11,14 @@ const btn_delete = document.getElementById('comic-removal')
 btn_delete.addEventListener('click', (e) => {
     e.preventDefault();
 
-    // lavoro sulla modale
+    // modal
     const modal = document.getElementById('deleteComicsModal')
     const new_modal = new bootstrap.Modal(modal)
     new_modal.show();
+
+    //data attribute
+    let comic_title = btn_delete.getAttribute('data-c-title')
+    document.getElementById('modal-text').innerText = `Sei davvero sicuro/a di voler cancellare ${comic_title}?`
 
     const confirm = document.getElementById('confirm-del')
     confirm.addEventListener('click', function () {
