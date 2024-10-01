@@ -86,16 +86,11 @@
                 
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <div class="d-flex my-3">
-                            <div class="form-check me-3">
-                                <input class="form-check-input" type="radio" name="type" id="graphic_novel" value="{{old('type', $comic->type)}}">
-                                <label class="form-check-label" for="graphic_novel">Graphic Novel</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="type" id="comic_book" value="{{old('type',$comic->type)}}">
-                                <label class="form-check-label" for="comic_book">Comic Book</label>
-                            </div>
-                        </div>
+                        <label for="type" class="control-label">Tipo</label>
+                        <input type="text" class="form-control @error('type') is-invalid @enderror" name="type" id="type" placeholder="Tipo" value="{{ old('type', $comic->type)}}">
+                        @error('type')
+                            <div class="text-danger">{{$message}}</div>
+                        @enderror
                     </div>
                 
                     <div class="col-12 col-md-6">
