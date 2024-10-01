@@ -20,6 +20,15 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul class="list-unstyled">
+                        @foreach ($errors->all() as $err)
+                            <li>{{$err}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form action="{{ route('comics.update', ['comic' => $comic->id]) }}" method="POST" class="my-4">
                 @csrf
                 {{-- method --}}
@@ -27,36 +36,36 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <label for="title" class="control-label">Titolo fumetto</label>
-                        <input type="text" class="form-control" name="title" id="title" placeholder="Nome" value="{{$comic->title}}">
+                        <input type="text" class="form-control" name="title" id="title" placeholder="Nome" value="{{ old('title'), $comic->title}}">
                     </div>
                 
                     <div class="col-12">
                         <label for="description" class="control-label">Breve descrizione</label>
-                        <textarea class="form-control" name="description" id="description" placeholder="Descrizione">{{$comic->description}}</textarea>
+                        <textarea class="form-control" name="description" id="description" placeholder="Descrizione">{{old('description'),$comic->description}}</textarea>
                     </div>
                 </div>
                 
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <label for="thumb" class="control-label">URL immagine</label>
-                        <input type="text" class="form-control" name="thumb" id="thumb" placeholder="Url" value="{{$comic->thumb}}">
+                        <input type="text" class="form-control" name="thumb" id="thumb" placeholder="Url" value="{{old('thumb'),$comic->thumb}}">
                     </div>
                 
                     <div class="col-12 col-md-6">
                         <label for="price" class="control-label">Prezzo</label>
-                        <input type="text" class="form-control" name="price" id="price" placeholder="Prezzo" value="{{$comic->price}}">
+                        <input type="text" class="form-control" name="price" id="price" placeholder="Prezzo" value="{{old('price'),$comic->price}}">
                     </div>
                 </div>
                 
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <label for="series" class="control-label">Serie</label>
-                        <input type="text" class="form-control" name="series" id="series" placeholder="Serie" value="{{$comic->series}}">
+                        <input type="text" class="form-control" name="series" id="series" placeholder="Serie" value="{{old('series'),$comic->series}}">
                     </div>
                 
                     <div class="col-12 col-md-6">
                         <label for="sale_date" class="control-label">Data di vendita</label>
-                        <input type="date" class="form-control" name="sale_date" id="sale_date" placeholder="Data di vendita" value="{{$comic->sale_date}}">
+                        <input type="date" class="form-control" name="sale_date" id="sale_date" placeholder="Data di vendita" value="{{old('sale_date'), $comic->sale_date}}">
                     </div>
                 </div>
                 
@@ -64,11 +73,11 @@
                     <div class="col-12 col-md-6">
                         <div class="d-flex my-3">
                             <div class="form-check me-3">
-                                <input class="form-check-input" type="radio" name="type" id="graphic_novel" value="{{$comic->type}}">
+                                <input class="form-check-input" type="radio" name="type" id="graphic_novel" value="{{old('title'), $comic->type}}">
                                 <label class="form-check-label" for="graphic_novel">Graphic Novel</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="type" id="comic_book" value="{{$comic->type}}">
+                                <input class="form-check-input" type="radio" name="type" id="comic_book" value="{{old('title'),$comic->type}}">
                                 <label class="form-check-label" for="comic_book">Comic Book</label>
                             </div>
                         </div>
@@ -76,14 +85,14 @@
                 
                     <div class="col-12 col-md-6">
                         <label for="artists" class="control-label">Artista</label>
-                        <input type="text" class="form-control" name="artists" id="artists" placeholder="Artisti" value="{{$comic->artists}}">
+                        <input type="text" class="form-control" name="artists" id="artists" placeholder="Artisti" value="{{old('title'),$comic->artists}}">
                     </div>
                 </div>
                 
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <label for="writers" class="control-label">Scritto da:</label>
-                        <input type="text" class="form-control" name="writers" id="writers" placeholder="Autori" value="{{$comic->writers}}">
+                        <input type="text" class="form-control" name="writers" id="writers" placeholder="Autori" value="{{old('title'),$comic->writers}}">
                     </div>
                 </div>
                 
