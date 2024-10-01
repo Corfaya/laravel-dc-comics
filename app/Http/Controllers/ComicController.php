@@ -36,10 +36,9 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreComicRequest $request)
+    public function store(StoreComicRequest $request, Comic $comic)
     {   
         $form_data = $request->validated();
-        $comic = new Comic();
 
         $comic->fill($form_data);
         $comic->save();
