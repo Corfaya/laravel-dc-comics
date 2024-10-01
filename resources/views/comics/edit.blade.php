@@ -36,7 +36,7 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <label for="title" class="control-label">Titolo fumetto</label>
-                        <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" id="title" placeholder="Nome" value="{{ old('title'), $comic->title}}">
+                        <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" id="title" placeholder="Nome" value="{{ old('title', $comic->title)}}">
                         @error('title')
                             <div class="text-danger">{{$message}}</div>
                         @enderror
@@ -44,14 +44,14 @@
                 
                     <div class="col-12">
                         <label for="description" class="control-label">Breve descrizione</label>
-                        <textarea class="form-control" name="description" id="description" placeholder="Descrizione">{{old('description'),$comic->description}}</textarea>
+                        <textarea class="form-control" name="description" id="description" placeholder="Descrizione">{{old('description', $comic->description)}}</textarea>
                     </div>
                 </div>
                 
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <label for="thumb" class="control-label">URL immagine</label>
-                        <input type="text" class="form-control @error('thumb') is-invalid @enderror" name="thumb" id="thumb" placeholder="Url" value="{{old('thumb'),$comic->thumb}}">
+                        <input type="text" class="form-control @error('thumb') is-invalid @enderror" name="thumb" id="thumb" placeholder="Url" value="{{old('thumb', $comic->thumb)}}">
                         @error('thumb')
                             <div class="text-danger">{{$message}}</div>
                         @enderror
@@ -59,7 +59,7 @@
                 
                     <div class="col-12 col-md-6">
                         <label for="price" class="control-label">Prezzo</label>
-                        <input type="text" class="form-control @error('price') is-invalid @enderror" name="price" id="price" placeholder="Prezzo" value="{{old('price'),$comic->price}}">
+                        <input type="text" class="form-control @error('price') is-invalid @enderror" name="price" id="price" placeholder="Prezzo" value="{{old('price',$comic->price)}}">
                         @error('price')
                             <div class="text-danger">{{$message}}</div>
                         @enderror
@@ -69,7 +69,7 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <label for="series" class="control-label">Serie</label>
-                        <input type="text" class="form-control @error('series') is-invalid @enderror" name="series" id="series" placeholder="Serie" value="{{old('series'),$comic->series}}">
+                        <input type="text" class="form-control @error('series') is-invalid @enderror" name="series" id="series" placeholder="Serie" value="{{old('series', $comic->series)}}">
                         @error('series')
                             <div class="text-danger">{{$message}}</div>
                         @enderror
@@ -77,7 +77,7 @@
                 
                     <div class="col-12 col-md-6">
                         <label for="sale_date" class="control-label">Data di vendita</label>
-                        <input type="date" class="form-control @error('sale_date') is-invalid @enderror" name="sale_date" id="sale_date" placeholder="Data di vendita" value="{{old('sale_date'), $comic->sale_date}}">
+                        <input type="date" class="form-control @error('sale_date') is-invalid @enderror" name="sale_date" id="sale_date" placeholder="Data di vendita" value="{{old('sale_date', $comic->sale_date)}}">
                         @error('sale_date')
                             <div class="text-danger">{{$message}}</div>
                         @enderror
@@ -88,11 +88,11 @@
                     <div class="col-12 col-md-6">
                         <div class="d-flex my-3">
                             <div class="form-check me-3">
-                                <input class="form-check-input" type="radio" name="type" id="graphic_novel" value="{{old('type'), $comic->type}}">
+                                <input class="form-check-input" type="radio" name="type" id="graphic_novel" value="{{old('type', $comic->type)}}">
                                 <label class="form-check-label" for="graphic_novel">Graphic Novel</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="type" id="comic_book" value="{{old('type'),$comic->type}}">
+                                <input class="form-check-input" type="radio" name="type" id="comic_book" value="{{old('type',$comic->type)}}">
                                 <label class="form-check-label" for="comic_book">Comic Book</label>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                 
                     <div class="col-12 col-md-6">
                         <label for="artists" class="control-label">Artista</label>
-                        <input type="text" class="form-control @error('artists') is-invalid @enderror" name="artists" id="artists" placeholder="Artisti" value="{{old('artists'),$comic->artists}}">
+                        <input type="text" class="form-control @error('artists') is-invalid @enderror" name="artists" id="artists" placeholder="Artisti" value="{{old('artists',$comic->artists)}}">
                         @error('artists')
                             <div class="text-danger">{{$message}}</div>
                         @enderror
@@ -110,7 +110,7 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <label for="writers" class="control-label">Scritto da:</label>
-                        <input type="text" class="form-control @error('writers') is-invalid @enderror" name="writers" id="writers" placeholder="Autori" value="{{old('writers'),$comic->writers}}">
+                        <input type="text" class="form-control @error('writers') is-invalid @enderror" name="writers" id="writers" placeholder="Autori" value="{{old('writers',$comic->writers)}}">
                         @error('writers')
                             <div class="text-danger">{{$message}}</div>
                         @enderror
