@@ -24,20 +24,19 @@ class StoreComicRequest extends FormRequest
     public function rules()
     {
         return [
-            [
-                'title' => 'required|max:100',
-                'thumb' => 'max:255',
-                'price' => 'decimal:2',
-                'series' => 'required|max:255',
-                'sale_date' => 'date',
-                'artists' => 'required',
-                'writers' => 'required'
-            ]
+            'title' => 'required|max:100',
+            'thumb' => 'max:255',
+            'price' => 'decimal:2',
+            'series' => 'required|max:255',
+            'sale_date' => 'date',
+            'artists' => 'required',
+            'writers' => 'required'
         ];
     }
 
-    public function messages() {
-        return [
+    public function messages()
+    {
+        return
             [
                 'title.required' => 'Questo campo è obbligatorio',
                 'title.max' => 'Il numero massimo di caratteri è 100',
@@ -48,7 +47,6 @@ class StoreComicRequest extends FormRequest
                 'sale_date.date' => 'Deve essere una data in formato gg/mm/aaaa',
                 'artists.required' => 'Questo campo è obbligatorio',
                 'writers.required' => 'Questo campo è obbligatorio',
-            ]
             ];
     }
 }
