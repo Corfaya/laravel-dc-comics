@@ -43,9 +43,19 @@ class ComicController extends Controller
             'price' => 'decimal:2',
             'series' => 'required|max:255',
             'sale_date' => 'date',
-            'type' => 'required|max:50',
             'artists' => 'required',
-            'title' => 'required'
+            'writers' => 'required'
+        ],
+        [
+            'title.required' => 'Questo campo è obbligatorio',
+            'title.max' => 'Il numero massimo di caratteri è 100',
+            'thumb.max' => 'Il numero massimo di caratteri è 255',
+            'price.decimal' => 'Puoi inserire massimo due numeri dopo la virgola',
+            'series.required' => 'Questo campo è obbligatorio',
+            'series.max' => 'Il numero massimo di caratteri è 255',
+            'sale_date.date' => 'Deve essere una data in formato gg/mm/aaaa',
+            'artists.required' => 'Questo campo è obbligatorio',
+            'writers.required' => 'Questo campo è obbligatorio',
         ]);
 
         $form_data = $request->all();
@@ -108,7 +118,21 @@ class ComicController extends Controller
             'type' => 'required|max:50',
             'artists' => 'required',
             'title' => 'required'
+        ],
+        [
+            'title.required' => 'Questo campo è obbligatorio',
+            'title.max' => 'Il numero massimo di caratteri è 100',
+            'thumb.max' => 'Il numero massimo di caratteri è 255',
+            'price.decimal' => 'Puoi inserire massimo due numeri dopo la virgola',
+            'series.required' => 'Questo campo è obbligatorio',
+            'series.max' => 'Il numero massimo di caratteri è 255',
+            'sale_date.date' => 'Deve essere una data in formato gg/mm/aaaa',
+            'type.required' => 'Questo campo è obbligatorio',
+            'type.max' => 'Il numero massimo di caratteri è 50',
+            'artists.required' => 'Questo campo è obbligatorio',
+            'writers.required' => 'Questo campo è obbligatorio',
         ]);
+
         $form_data = $request->all();
         $comic->fill($form_data);
         $comic->update();
